@@ -5,6 +5,8 @@
 \usepackage{lmodern}          %besserer Font
 \usepackage{microtype}        %bessere Zeichenabstände
 \usepackage[german]{babel}    %deutsch
+\setlength{\parindent}{0pt}
+
 
 \usepackage[a4paper,margin=2.5cm]{geometry} %Seitenmaße
 \parskip.5\baselineskip
@@ -21,20 +23,11 @@
    ~
    
    {\LARGE\bfseries
-      Vergleich von KI-Algorithmen zur Optimierung des Lade- und Entlademanagements von Elektrofahrzeugen in Smart Grids}
+     Vergleich von KI-Algorithmen zur Optimierung des Lade- und Entlademanagements
+     von Elektrofahrzeugen in Smart Grids}
 
    \large
-   [Platzhalter]
    
-   [Platzhalter]
-   
-   [Platzhalter]
-   
-   [Informatik]
-   
-   [geplanter Zeitraum]
-   
-   Betreuer: [Betreuer]
 %}
 \end{center}
 
@@ -42,21 +35,39 @@
 \section{Problemstellung}
 
 \subsection{Motivation}
+Die Integration von Elektrofahrzeugen in Smart Grids und die zunehmende Nutzung von
+erneuerbaren Energien, wie beispielsweise Solarenergie, erfordern effiziente Algorithmen,
+und den Lade- und Entlademanagementprozess optimal zu steuern.
+
+Herkömmliche Steuerungsmethoden (Zeitbasierte Steuerung, Lastfolgeregelung, Manuelle
+oder statische Steuerung und Peak-Sharing-Ansätze) sind häufig zu starr, um sich
+dynamischen Bedingungen in Smart Grids anzupassen, insbesondere, wenn erneuerbare
+Energien und Elektrofahrzeuge als flexible Speicher eingebunden sind.
+
+Die herkömmlichen Steuerungsmethoden berücksichtigen die Schwankungen bei der Energieerzeugung
+der erneuerbaren Quellen nicht ausreichend, was zu Über- oder Unterversorgung im Netz
+führen kann. Die Konsequenz daraus sind höhere Kosten und potenziell instabile Netze.
+
+
+
 \begin{itemize}
 \item Was ist das Problem, dass in der Arbeit gelöst werden soll?
-\item Warum ist dies ein relevantes Problem für die Informatik (Motivation)?
+
+Informatik spielt eine Schlüsselrolle in der Optimierung von Energiesystemen, da Algorithmen der künstlichen Intelligenz (KI) und anderen Verfahren eine zentrale Funktion in der Steuerung und Vorhersage von Energieflüssen haben. Durch die Entwicklung und Verbesserung von Algorithmen kann die Informatik dazu beitragen, die Effizienz und Zuverlässigkeit von Smart Grids zu steigern.
 \end{itemize}
 
 \subsection{Aufgabenstellung}
-\begin{itemize}
-\item Was ist die konkrete Aufgabenstellung, das Ziel der Arbeit?
-\end{itemize}
+
+\textbf{Was ist die konkrete Aufgabenstellung, das Ziel der Arbeit?}
+
+Ziel der Arbeit ist es, einen Vergleich verschiedener KI-Algorithmen wie Model Predictive Control (MPC), Künstliche Neuronale Netze (ANN), Reinforcement Learning (RL) und Federated Learning (FL) im Kontext des Lade- und Entlademanagements von Elektrofahrzeugen in Mikronetzen durchzuführen. Die Algorithmen sollen hinsichtlich Effizienz, Kostenoptimierung und Netzstabilität auf Basis von bereits existierenden Studien und Simulationsergebnissen analysiert werden.
+
 
 \subsection{Intendierte Ergebnisse}
 \begin{itemize}
-\item Was sind die intendierten Ergebnisse der Arbeit, die mit geeigneten Methoden
-der Informatik erzielt werden sollen, und die das Problem lösen?
-(z.\,B. Anforderungsdefinition, Spezifikation, Architektur, Algorithmen, Prototyp, Methode etc.)
+    \item Eine systematische Vergleichsanalyse von MPC, ANN, RL und FL, die zeigt, welche Algorithmen sich am besten für das Lade- und Entlademanagement von Elektrofahrzeugen in Smart Grids eignen.
+    \item Handlungsempfehlungen für die praktische Anwendung von KI-Algorithmen in der Energieverwaltung von Mikronetzen, basierend auf der Analyse von bestehenden Studien.
+    \item Validierung der Ergebnisse durch Literaturdaten und vergleichende Analyse bestehender Simulationsergebnisse.
 \end{itemize}
 
 
@@ -64,57 +75,156 @@ der Informatik erzielt werden sollen, und die das Problem lösen?
 
 \begin{itemize}
 \item Was gibt es an existierenden Lösungen/Ansätzen?
+
+Bereits vorhandene Ansätze zur Energieoptimierung in Microgrids umfassen Methoden wie
+Model Predictive Control(MPC), die Vorhersagen zukünftiger Netzbelastungen nutzen.
+Des weiteren gibt es Ansätze der künstlichen neuronalen Netze (ANN), Reinforcement Learning(RL) und Federated Learning(FL), die versuchen, verteilte Datenquellen efiizient zu verarbeiten und den Energiefluss zu optimieren.
 \item Welche Defizite haben diese, d.\,h., warum sind die nicht ausreichend
       zur Lösung des Problems?
+
+     \begin{itemize}
+      \item MPC ist oft aufwending in der Berechnung und nicht immer für Echtzeitanwendungen geeignet.
+      \item Künstliche neuronale Netze benötigen umfangreiche Datenmengen zum Trainieren und können sich bei inkonsistenten Bedingungen ineffizient sein.
+      \item Reinforcement Learning benötigt oft viele Iterationen, um zu optimalen Lösungen zu gelangen, was die Anwendbarkeit im dynmaischen Umfeld eines Mikronetzes einschränkt.
+      \item Federated Learning steht vor der Herausforderung, wie man effektiv verteilte Systeme synchronisieren und verwalten kann, insbesondere wenn die Datenqualität oder -menge schwankt.
+      \end{itemize}
+
+
+
+
+      
 \end{itemize}
 
 
 \section{Lösungsidee}
 
+Die Seminararbeit wird als vergleichende Analyse verschiedener KI-Algorithmen konzipiert, die speziell für das Lade- und Entlademanagement von Elektrofahrzeugen in Smart Grids geeignet sein könnten. Die Kriterien für den Vergleich umfassen die Kostenoptimierung, Netzstabilität und Energieeffizienz der jeweiligen Algorithmen. Ziel ist es, die Praxistauglichkeit dieser Algorithmen im spezifischen Anwendungsfall von Smart Grids zu untersuchen und zu bewerten, um eine fundierte Empfehlung für zukünftige Anwendungen geben zu können.
+
 \begin{itemize}
-\item Welche Ideen haben Sie zur Lösung des Problems?
+
 \item Mit welchen Schritten wird die Lösungsidee realisiert?
-      \begin{itemize}
-      \item Mit welchen Methoden der Informatik werden die intendierten
-            Ergebnisse der Arbeit (s.\,o.) erreicht?
-      \item Warum sind diese angemessen, um die Ergebnisse mit der notwendigen Qualität
-            zu erreichen?
-      \end{itemize}
-      \item Wie wird im Rahmen der Arbeit geprüft (validiert), ob die Ergebnisse korrekt
-            sind, d.\,h. das Problem tatsächlich lösen? Welche Unsicherheiten bleiben
-            ggfs. als offene Fragen für Folgearbeiten bestehen?
+
+    \begin{enumerate}
+        \item \textbf{Literaturrecherche}: Umfassende Durchsicht und Analyse relevanter wissenschaftlicher Artikel und Studien, die sich mit der Anwendung von Model Predictive Control (MPC), Künstlichen Neuronalen Netzen (ANN), Reinforcement Learning (RL) und Federated Learning (FL) im Energiemanagement beschäftigen. Ziel ist es, die wichtigsten Erkenntnisse und Praxisberichte über diese Algorithmen zu sammeln und die wissenschaftliche Grundlage für die Analyse zu legen.
+
+        \item \textbf{Analyse der Algorithmen}: Untersuchung der Stärken und Schwächen der Algorithmen anhand festgelegter Kriterien:
+            \begin{itemize}
+                \item Effizienz: Wie gut optimieren die Algorithmen den Lade- und Entladeprozess in Echtzeit und passen sich dynamischen Bedingungen an?
+                \item Kostenoptimierung: In welchem Maße tragen die Algorithmen zur Reduktion von Energiekosten bei?
+                \item Netzstabilität: Wie stark unterstützen die Algorithmen die Stabilität des Smart Grids unter verschiedenen Lastbedingungen?
+            \end{itemize}
+        
+        \item \textbf{Vergleich der Ergebnisse}: Die Algorithmen werden gegenübergestellt, um ihre Leistung und Eignung im Kontext von Smart Grids zu bewerten. Dieser Vergleich erfolgt auf Grundlage bereits veröffentlichter Studien und Simulationsergebnisse, die die verschiedenen Algorithmen unter unterschiedlichen Bedingungen testen und bewerten.
+    \end{enumerate}
+
+\item Mit welchen Methoden der Informatik werden die intendierten Ergebnisse der Arbeit (s.o.) erreicht?
+
+    \begin{itemize}
+        \item Systematische Literaturrecherche: Ausführliche Literaturrecherche, um die neuesten Entwicklungen und Untersuchungen zu den KI-Algorithmen im Energiemanagement zu erfassen und systematisch auszuwerten. Dies umfasst das Sammeln von Informationen über Effizienz, Kostenoptimierung und Netzstabilität.
+        
+        \item Algorithmische Vergleichsanalyse: Die Analyse und Bewertung der Algorithmen anhand festgelegter Kriterien (Effizienz, Kostenoptimierung und Netzstabilität) stellt sicher, dass die Algorithmen systematisch und objektiv bewertet werden können. 
+        \item Validierung durch Fallstudien und existierende Simulationsergebnisse: Der Vergleich basiert auf bereits bestehenden Simulationen und Studien, die reale Anwendungsszenarien abbilden. 
+    \end{itemize}
+
+\item Warum sind diese Methoden angemessen, um die Ergebnisse mit der notwendigen Qualität zu erreichen?
+
+    Die Methoden sind angemessen, da die systematische Literaturrecherche eine wissenschaftlich fundierte und nachvollziehbare Grundlage schafft, auf der die Algorithmen beurteilt werden können. Die vergleichende Analyse erlaubt eine präzise Bewertung der Algorithmen anhand objektiver Kriterien und ermöglicht es, die Stärken und Schwächen der Algorithmen klar herauszuarbeiten. Die Validierung durch existierende Simulationsergebnisse stellt sicher, dass die Ergebnisse praxisnah und übertragbar sind.
+
+\item Wie wird im Rahmen der Arbeit geprüft (validiert), ob die Ergebnisse korrekt sind, d.h., das Problem tatsächlich lösen? Welche Unsicherheiten bleiben ggfs. als offene Fragen für Folgearbeiten bestehen?
+
+    Die Validierung erfolgt durch eine Bewertung der Algorithmen auf Basis veröffentlichter Studien und Simulationsergebnisse. Diese Methodik stellt sicher, dass die Ergebnisse auf empirisch belegten Daten beruhen. Unsicherheiten, wie etwa die Verfügbarkeit spezifischer Daten für weiterführende Studien oder die Auswirkungen bei großflächigem Einsatz in Smart Grids, könnten in zukünftigen Arbeiten untersucht werden. Weitere offene Fragen könnten sich auf die Integration neuer, noch unerforschter KI-Ansätze und deren Optimierungspotenzial im Smart-Grid-Management beziehen.
+    
 \end{itemize}
+
 
 
 \section{Vorläufige Gliederung}
 
-\begin{itemize}
-\item Gliederungsvorschlag (Kapitel und Abschnitte mit Stichworten für geplante Inhalte),
-      der die Ergebnisse Ihres Vorgehens als Lösung der Aufgabenstellung
-      (Problem, Ziel der Arbeit) nachvollziehbar und begründet darstellt.
-\end{itemize}
+\begin{enumerate}
+    \item \textbf{Einleitung}
+        \begin{itemize}
+            \item Problemstellung: Herausforderungen im Lade- und Entlademanagement von Elektrofahrzeugen in Smart Grids.
+            \item Motivation: Bedeutung effizienter KI-Algorithmen für das Energiemanagement.
+            \item Zielsetzung und Forschungsfrage: Vergleich und Bewertung von KI-Algorithmen für die Optimierung des Lade- und Entlademanagements von Elektrofahrzeugen.
+            \item Aufbau der Arbeit: Überblick über die Struktur der Arbeit.
+        \end{itemize}
+        
+    \item \textbf{Grundlagen}
+        \begin{itemize}
+            \item Definition und Struktur von Smart Grids und Mikronetzen.
+            \item Lade- und Entlademanagement von Elektrofahrzeugen in Smart Grids: Anforderungen und Herausforderungen.
+            \item Überblick über relevante KI-Algorithmen (MPC, ANN, RL, FL) und deren allgemeine Funktionsweise.
+        \end{itemize}
+        
+    \item \textbf{Aktueller Stand der Technik}
+        \begin{itemize}
+            \item Übersicht über den aktuellen Stand der Forschung zu Model Predictive Control (MPC) für das Lade- und Entlademanagement.
+            \item Einsatz von Künstlichen Neuronalen Netzen (ANN) und Reinforcement Learning (RL) im Energiemanagement von Elektrofahrzeugen.
+            \item Anwendung von Federated Learning (FL) zur dezentralen Optimierung und Verarbeitung in Smart Grids.
+            \item Identifizierung von Defiziten und Optimierungspotenzialen in der bisherigen Forschung.
+        \end{itemize}
+        
+    \item \textbf{Methodik}
+        \begin{itemize}
+            \item Systematische Literaturrecherche: Vorgehen, Suchstrategien und Auswahlkriterien.
+            \item Festlegung der Vergleichskriterien für die Algorithmen im Kontext des Lade- und Entlademanagements:
+                \begin{itemize}
+                    \item \textbf{Effizienz}: Optimierung der Lade- und Entladeprozesse für Elektrofahrzeuge in Echtzeit.
+                    \item \textbf{Kostenoptimierung}: Potenzial zur Reduktion von Energiekosten im Lade- und Entlademanagement.
+                    \item \textbf{Netzstabilität}: Beitrag zur Stabilität des Smart Grids durch effizientes Management der Ladezyklen.
+                \end{itemize}
+            \item Validierung und Bewertung: Vorgehensweise zur objektiven Beurteilung der Ergebnisse basierend auf Literaturdaten.
+        \end{itemize}
+        
+    \item \textbf{Vergleich der KI-Algorithmen im Lade- und Entlademanagement von Elektrofahrzeugen}
+        \begin{itemize}
+            \item \textbf{Model Predictive Control (MPC)}: Analyse und Bewertung der Eignung für die Echtzeit-Steuerung des Lade- und Entlademanagements.
+            \item \textbf{Künstliche Neuronale Netze (ANN)}: Bewertung der Vorhersage- und Optimierungsleistung im Lade- und Entlademanagement.
+            \item \textbf{Reinforcement Learning (RL)}: Untersuchung des adaptiven Verhaltens und der Lernfähigkeit in dynamischen Ladesituationen.
+            \item \textbf{Federated Learning (FL)}: Bewertung der Datenschutz- und Effizienzvorteile für dezentrale Anwendungen im Lade- und Entlademanagement.
+            \item \textbf{Zusammenfassende Bewertung und Vergleich}: Gegenüberstellung der Algorithmen nach Effizienz, Kostenoptimierung und Netzstabilität für das Lade- und Entlademanagement von Elektrofahrzeugen.
+        \end{itemize}
+        
+    \item \textbf{Schlussfolgerungen und Ausblick}
+        \begin{itemize}
+            \item Zusammenfassung der wichtigsten Erkenntnisse und Vergleichsergebnisse.
+            \item Handlungsempfehlungen für den praktischen Einsatz von KI-Algorithmen im Lade- und Entlademanagement.
+            \item Zukunftsperspektiven und mögliche Forschungsrichtungen zur Weiterentwicklung und Anwendung der Algorithmen.
+        \end{itemize}
+        
+\end{enumerate}
+
+
 
 
 \section{Vorläufiger Zeitplan}
 
 \begin{itemize}
-\item Abfolge der notwendigen Schritte inkl. Erstellung der jeweiligen Kapitel der Arbeit
-\item Meilensteine von Anmeldung bis Abgabe der Arbeit
+\item Literaturrecherche und Analyse der existierenden Lösungen.
+\item Analyse und Vergleich der Algorithmen.
+\item Schlussfolgerungen und Empfehlungen.
+\item Überarbeitung und Finalisierung der Arbeit.
 \end{itemize}
+
+
 
 
 \section{Ausgangsliteratur}
 
 \begin{itemize}
-\item relevante Literaturquellen, hier im Exposé an den geeigneten Stellen referenziert
-\item Zitierweise gemäß der Mustervorlage für Abschlussarbeiten
+    \item Camacho, E. F., & Bordons, C. (2013). \textit{Model Predictive Control}. Springer.
+    \item Klein, R., et al. (2017). Energy Management in Microgrids Using Model Predictive Control: A Review. \textit{Renewable and Sustainable Energy Reviews}.
+    \item Sarker, S. K., et al. (2021). Ancillary Voltage Control Design for Adaptive Tracking Performance of Microgrid Coupled with Electric Vehicles. \textit{IEEE Access}.
+    \item Wang, Y., et al. (2023). Federated Learning for Smart Grid Applications: A Comprehensive Review. \textit{IEEE Transactions on Industrial Informatics}.
+    \item Zhang, X., et al. (2024). Explainable AI for Energy Management in Smart Grids: Challenges and Opportunities. \textit{Nature Energy}.
+    \item Li, Y., et al. (2020). Reinforcement Learning for Demand Response in Smart Grids: A Comprehensive Review. \textit{IEEE Access}.
+    \item Ahmad, T., & Chen, H. (2021). Artificial Neural Networks in Smart Grid Applications: A Review. \textit{Energies}.
+    \item Mehr ist möglich!
 \end{itemize}
 
 
-\section{Abschlussarbeit im Unternehmen}
 
-Bei Arbeiten, die in einer Firma/Behörde/Institution durchgeführt werden sollen,
-geben Sie bitte die dort betreuende Person an. Sie sollte idealerweise einen
-Abschluss in Informatik haben und die Erstellung der Arbeit inhaltlich mitbetreuen.
+
+
 
 \end{document}
